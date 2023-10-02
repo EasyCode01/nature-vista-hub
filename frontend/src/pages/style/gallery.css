@@ -1,0 +1,90 @@
+.gallery-bg {
+  background-image: url("https://toppng.com/uploads/preview/plants-botanical-garden-greenhouse-green-11570121722yk0yorvyng.jpg");
+}
+
+.gallery .recent {
+  color: var(--call-to-action);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.gallery .our-gallery {
+  color: var(--dark-green);
+  font-size: 30px;
+}
+
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.gallery-photo {
+  position: relative;
+  border-radius: 10px;
+  height: 300px;
+  box-shadow: 2px 4px 6px var(--box-shadow), -2px -4px 6px var(--box-shadow);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-photo .image-wrapper {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.gallery-photo img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.gallery-photo .gallery-details {
+  display: flex;
+  height: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(-10deg, #224943a4, #efc268b5);
+  border-radius: 10px;
+  transition: all 500ms ease;
+  opacity: 0;
+}
+
+.gallery-photo .gallery-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gallery-photo:hover .gallery-details {
+  height: 100%;
+  opacity: 1;
+}
+
+.gallery-photo .gallery-details p {
+  color: var(--color-white);
+}
+
+.gallery-photo .gallery-details a {
+  color: var(--color-white);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  transition: all 500ms ease;
+}
+
+.gallery-photo .gallery-details a:hover {
+  background-color: var(--call-to-action);
+  color: var(--light-green);
+}
