@@ -1,0 +1,64 @@
+.bg-image {
+  background-image: url("https://as1.ftcdn.net/v2/jpg/04/39/02/46/1000_F_439024603_pHjWAZrHOojIFLykqoG5YBv65zcomlMS.jpg");
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.banner h1 {
+  margin-bottom: 10px;
+  color: var(--color-white);
+  font-size: 50px;
+}
+
+.banner a {
+  color: var(--call-to-action);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.about-us .section-two {
+  display: flex;
+  gap: 30px;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.about-us .left {
+  flex: 1;
+  height: 100%;
+}
+
+.about-us .right {
+  flex: 1;
+  height: 100%;
+}
+
+.about-us .left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-us .welcome {
+  color: var(--call-to-action);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.about-us .nuture {
+  color: var(--dark-green);
+  font-size: 30px;
+}
+
+.about-us .quality span {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: var(--call-to-action);
+  color: var(--dark-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

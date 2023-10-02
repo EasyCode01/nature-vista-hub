@@ -1,5 +1,12 @@
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Outlet,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import {
   About,
   Blogs,
@@ -14,24 +21,61 @@ import MobileMenu from "./components/MobileMenu";
 import Footer from "./components/Footer";
 
 function App() {
-  return (
-    <Router>
+  const Layout = () => {
+    return (
       <div className="app">
         <Navbar />
         <MobileMenu />
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/blog" element={<Blogs />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="/promotions" element={<Promotions />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Outlet />
         <Footer />
       </div>
-    </Router>
+    );
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/",
+          element: <Homepage />,
+        },
+        {
+          path: "/about-us",
+          element: <About />,
+        },
+        {
+          path: "/blog",
+          element: <Blogs />,
+        },
+        {
+          path: "/books",
+          element: <Books />,
+        },
+        {
+          path: "/gallery",
+          element: <Gallery />,
+        },
+        {
+          path: "/promotion",
+          element: <Promotions />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
+      ],
+    },
+  ]);
+  return (
+    <div>
+      <RouterProvider router={router} />
+    </div>
   );
 }
 

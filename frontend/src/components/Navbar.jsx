@@ -19,8 +19,8 @@ const Navbar = () => {
     <header>
       <nav className="navbar container">
         <Link to={"/"} className="nav-logo">
-          <div className="nav-logo-left">
-            <div className="bg-logo"></div>
+          <div className="nav-logo-left logo-holder">
+            <div className="bg-logo icon-bg"></div>
             <span className="logo-icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
