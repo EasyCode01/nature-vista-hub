@@ -1,0 +1,139 @@
+header {
+  box-shadow: 2px 3px 6px var(--box-shadow);
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu-icon {
+  cursor: pointer;
+  display: none;
+}
+
+.navbar .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .nav-logo-left {
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.navbar .bg-logo {
+  width: 30px;
+  height: 30px;
+  background-color: var(--call-to-action);
+  border-radius: 50%;
+}
+
+.navbar .logo-icon {
+  transform: rotate(20deg);
+  position: absolute;
+  top: -5px;
+  left: -8px;
+}
+
+.navbar .logo-icon svg {
+  color: var(--dark-green);
+}
+
+.navbar .nav-logo .text {
+  color: var(--dark-green);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.navbar .nav-logo .hub {
+  color: var(--dark-green);
+  font-size: 24px;
+}
+
+.navbar-links-and-social {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-link {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  transition: all 400ms ease;
+}
+
+.social-link:hover {
+  background-color: var(--call-to-action);
+}
+
+.social-link a {
+  color: var(--dark-green);
+}
+/* moble menu */
+
+.mobile-menu {
+  position: fixed;
+  z-index: 10;
+  top: 70px;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background: linear-gradient(-20deg, #224943, #efc368);
+  transform: translateX(-120%);
+  transition: all 500ms ease;
+}
+
+.open-mobile-menu {
+  transform: translateX(0);
+}
+
+.mobile-link-holder {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 70px);
+  width: 100%;
+}
+
+.moblie-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.moblie-links a {
+  color: var(--dark-green);
+  font-weight: 600;
+}
+
+.mobile-social-link {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
